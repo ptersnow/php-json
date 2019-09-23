@@ -12,23 +12,25 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return view('welcome');
 });
 
-$router->get('/users', 'UserController@index');
-$router->post('/user', 'UserController@create');
-$router->get('/user/{id}', 'UserController@show');
-$router->put('/user/{id}', 'UserController@update');
-$router->delete('/user/{id}', 'UserController@destroy');
+$router->group(['prefix' => 'api'], function () use ($router) {
+  $router->get('/users', 'UserController@index');
+  $router->post('/user', 'UserController@create');
+  $router->get('/user/{id}', 'UserController@show');
+  $router->put('/user/{id}', 'UserController@update');
+  $router->delete('/user/{id}', 'UserController@destroy');
 
-$router->get('/posts', 'PostController@index');
-$router->post('/post', 'PostController@create');
-$router->get('/post/{id}', 'PostController@show');
-$router->put('/post/{id}', 'PostController@update');
-$router->delete('/post/{id}', 'PostController@destroy');
+  $router->get('/posts', 'PostController@index');
+  $router->post('/post', 'PostController@create');
+  $router->get('/post/{id}', 'PostController@show');
+  $router->put('/post/{id}', 'PostController@update');
+  $router->delete('/post/{id}', 'PostController@destroy');
 
-$router->get('/comments', 'CommentController@index');
-$router->post('/comment', 'CommentController@create');
-$router->get('/comment/{id}', 'CommentController@show');
-$router->put('/comment/{id}', 'CommentController@update');
-$router->delete('/comment/{id}', 'CommentController@destroy');
+  $router->get('/comments', 'CommentController@index');
+  $router->post('/comment', 'CommentController@create');
+  $router->get('/comment/{id}', 'CommentController@show');
+  $router->put('/comment/{id}', 'CommentController@update');
+  $router->delete('/comment/{id}', 'CommentController@destroy');
+});
