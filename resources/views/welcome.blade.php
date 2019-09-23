@@ -11,35 +11,39 @@
         <p>Api utilizada nas minhas disciplinas, acessível pelo <a href="https://php-json.herokuapp.com" rel="nofollow">link</a>.</p>
       <h3>Métodos e URLs aceitas:</h3>
       <h5>Usuários</h5>
-      <pre><code>GET  -&gt;   https://php-json.herokuapp.com/api/users
-      GET  -&gt;   https://php-json.herokuapp.com/api/user/{id}
-      POST -&gt;   https://php-json.herokuapp.com/api/user
-      PUT -&gt;    https://php-json.herokuapp.com/api/user/{id}
+      <pre><code>
+      GET    -&gt; https://php-json.herokuapp.com/api/users
+      GET    -&gt; https://php-json.herokuapp.com/api/user/{id}
+      POST   -&gt; https://php-json.herokuapp.com/api/user
+      PUT    -&gt; https://php-json.herokuapp.com/api/user/{id}
       DELETE -&gt; https://php-json.herokuapp.com/api/user/{id}
       </code></pre>
       <p>Sendo que, para o método POST, deve ser passado um objeto JSON do tipo:</p>
-      <pre><code>{
-          "user": {
-              "name": "Pedro Silva",
-              "username": "ptersnow",
-              "pass": "123456"
-          }
+      <pre><code>
+      {
+        "user": {
+          "name": "Pedro Silva",
+          "username": "ptersnow",
+          "pass": "123456"
+        }
       }
       </code></pre>
       <h5>Postagens</h5>
-      <pre><code>GET  -&gt;   https://php-json.herokuapp.com/api/posts
-      GET  -&gt;   https://php-json.herokuapp.com/api/posts/{id}
-      POST -&gt;   https://php-json.herokuapp.com/api/posts
-      PUT -&gt;    https://php-json.herokuapp.com/api/posts/{id}
+      <pre><code>
+      GET    -&gt; https://php-json.herokuapp.com/api/posts
+      GET    -&gt; https://php-json.herokuapp.com/api/posts/{id}
+      POST   -&gt; https://php-json.herokuapp.com/api/posts
+      PUT    -&gt; https://php-json.herokuapp.com/api/posts/{id}
       DELETE -&gt; https://php-json.herokuapp.com/api/posts/{id}
       </code></pre>
       <p>Sendo que, para o método POST, deve ser passado um objeto JSON do tipo:</p>
-      <pre><code>{
-          "post": {
-              "title": "Título do post",
-              "content": "Conteúdo",
-              "user_id": 1
-          }
+      <pre><code>
+      {
+        "post": {
+          "title": "Título do post",
+          "content": "Conteúdo",
+          "user_id": 1
+        }
       }
       </code></pre>
       </article>
