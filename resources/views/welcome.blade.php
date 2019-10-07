@@ -31,10 +31,10 @@
       <h5>Postagens</h5>
       <pre><code>
       GET    -&gt; https://php-json.herokuapp.com/api/posts
-      GET    -&gt; https://php-json.herokuapp.com/api/posts/{id}
-      POST   -&gt; https://php-json.herokuapp.com/api/posts
-      PUT    -&gt; https://php-json.herokuapp.com/api/posts/{id}
-      DELETE -&gt; https://php-json.herokuapp.com/api/posts/{id}
+      GET    -&gt; https://php-json.herokuapp.com/api/post/{id}
+      POST   -&gt; https://php-json.herokuapp.com/api/post
+      PUT    -&gt; https://php-json.herokuapp.com/api/post/{id}
+      DELETE -&gt; https://php-json.herokuapp.com/api/post/{id}
       </code></pre>
       <p>Sendo que, para o método POST, deve ser passado um objeto JSON do tipo:</p>
       <pre><code>
