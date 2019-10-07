@@ -17,7 +17,7 @@ class PostController extends Controller {
     $post = new Post;
     $post->title = $request->title;
     $post->content = $request->content;
-//    $post->password = $request->password;
+    $post->user_id = $request->user_id;
     $post->save();
     return response()->json($post);
   }
@@ -32,7 +32,7 @@ class PostController extends Controller {
 
     $post->title = $request->input('title');
     $post->content = $request->input('content');
-    //$post->password = $request->input('password');
+    $post->user_id = $request->input('user_id');
     $post->save();
     return response()->json($post);
   }

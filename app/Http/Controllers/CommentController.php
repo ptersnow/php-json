@@ -15,9 +15,9 @@ class CommentController extends Controller {
 
   public function create(Request $request) {
     $comment = new Comment;
-    $comment->title = $request->title;
-    //$comment->email = $request->email;
-    //$comment->password = $request->password;
+    $comment->content = $request->content;
+    $comment->post_id = $request->post_id;
+    $comment->user_id = $request->user_id;
     $comment->save();
     return response()->json($comment);
   }
@@ -30,9 +30,9 @@ class CommentController extends Controller {
   public function update(Request $request, $id) {
     $comment= Comment::find($id);
 
-    $comment->title = $request->input('title');
-    //$comment->email = $request->input('email');
-    //$comment->password = $request->input('password');
+    $comment->content = $request->input('content');
+    $comment->post_id = $request->input('post_id');
+    $comment->user_id = $request->input('user_id');
     $comment->save();
     return response()->json($comment);
   }
