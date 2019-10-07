@@ -15,8 +15,8 @@ class UserController extends Controller {
 
   public function create(Request $request) {
     $user = new User;
+    $user->name = $request->name;
     $user->username = $request->username;
-    $user->email = $request->email;
     $user->password = $request->password;
 
     $user->save();
@@ -31,8 +31,8 @@ class UserController extends Controller {
   public function update(Request $request, $id) {
     $user= User::find($id);
 
+    $user->name = $request->input('name');
     $user->username = $request->input('username');
-    $user->email = $request->input('email');
     $user->password = $request->input('password');
     $user->save();
     return response()->json($user);

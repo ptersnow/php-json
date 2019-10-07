@@ -24,7 +24,7 @@
         "user": {
           "name": "Pedro Silva",
           "username": "ptersnow",
-          "pass": "123456"
+          "password": "123456"
         }
       }
       </code></pre>

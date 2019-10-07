@@ -21,7 +21,7 @@ Sendo que, para o método POST, deve ser passado um objeto JSON do tipo:
     "user": {
         "name": "Pedro Silva",
         "username": "ptersnow",
-        "pass": "123456"
+        "password": "123456"
     }
 }
 ```
