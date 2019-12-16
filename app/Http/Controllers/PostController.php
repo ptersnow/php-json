@@ -23,7 +23,7 @@ class PostController extends Controller {
   }
 
   public function show($id) {
-    $post = Post::with('comments')->find($id);
+    $post = Post::with(['user', 'comments'])->find($id);
     return response()->json($post);
   }
 
